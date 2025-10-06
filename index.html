@@ -1,3 +1,543 @@
-<!DOCTYPE html><html lang="pl"><head><link rel="icon" type="image/png" href="sladexgrucha.png"><meta charset="UTF-8"><title>Slade x Grucha | KONKURS (pajęczyny + bujanie)</title>
-<style>*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif}body{background:url('tloo.png') no-repeat center center fixed;background-size:cover;color:white;min-height:100vh;display:flex;flex-direction:column;align-items:center;position:relative;overflow-x:hidden;perspective:1000px;opacity:0;transition:opacity 1s ease-in-out}body.loaded{opacity:1}.contest-frame{border:2px solid #fcc884;border-radius:20px;padding:30px 20px;background:rgb(19,19,19);max-width:600px;width:90%;display:flex;flex-direction:column;gap:20px;z-index:2;position:relative;box-shadow:0 0 20px rgba(192,132,252,0.5);margin-top:30px}header{text-align:center}header h1{font-size:2rem;margin-bottom:10px}#partners-container{display:flex;flex-direction:column;gap:15px}.partner-card{display:flex;align-items:center;justify-content:space-between;padding:15px;border-radius:10px;background-size:cover;background-position:center;cursor:pointer;position:relative;overflow:hidden;transition:transform .2s ease,box-shadow .2s ease}.partner-card::after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.5);border-radius:10px;transition:background .3s ease}.partner-logo{width:50px;height:50px;z-index:2;margin-right:15px;background-color:rgba(0,0,0,.4);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0}.partner-logo img{max-width:100%;max-height:100%;object-fit:contain}.partner-name{font-size:1.2rem;font-weight:bold;z-index:2;flex-grow:1}.partner-card:hover{transform:scale(1.03);box-shadow:0 0 15px rgba(255,255,255,.3)}.overlay{position:absolute;inset:0;background:rgba(0,0,0,.7);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .3s ease;z-index:3;text-align:center;padding:10px}.overlay-text{font-size:1.1rem;font-weight:bold;line-height:1.3}.partner-card:hover .overlay{opacity:1}.checkmark{width:30px;height:30px;border-radius:50%;background-color:#00c853;display:flex;align-items:center;justify-content:center;color:white;font-size:18px;z-index:2;opacity:0;transform:scale(.5);transition:opacity .3s ease,transform .3s ease;flex-shrink:0;margin-left:10px}.checkmark.show{opacity:1;transform:scale(1)}.rules-list{margin-top:15px;margin-left:-20px;padding-left:20px;list-style:none;display:flex;flex-direction:column;gap:8px}.rules-list li{position:relative;padding-left:22px;font-size:1rem;color:#fcffd7;line-height:1.4;letter-spacing:.3px}.rules-list li::before{content:"✔";position:absolute;left:0;top:0;color:#ffee00;font-size:1.2rem;font-weight:bold;text-shadow:0 0 6px rgba(255,208,0,.7)}.hanger{position:fixed;top:0;display:flex;align-items:flex-start;justify-content:center;pointer-events:none;z-index:1;transform-origin:50% 0%;will-change:transform}.web-line{width:2px;background:linear-gradient(to bottom,rgba(255,255,255,.95),rgba(255,255,255,.1));border-radius:1px;box-shadow:0 0 6px rgba(255,255,255,.08);flex-shrink:0}.web-knot{width:12px;height:12px;border-radius:50%;background:radial-gradient(circle at 40% 30%,#ffffff,#cfcfcf 40%,transparent 70%);margin-top:6px;box-shadow:0 0 8px rgba(255,255,255,.1)}.hanger img.side-image{margin-top:8px;width:670px;height:670px;transform-origin:50% 0%;object-fit:contain;display:block;z-index:2;animation:none}.hanger.left{left:180px;top:-110px}.hanger.right{right:180px;top:-110px}@keyframes swing-left{0%{transform:rotate(-16deg)}15%{transform:rotate(-10deg)}40%{transform:rotate(8deg)}60%{transform:rotate(-6deg)}85%{transform:rotate(12deg)}100%{transform:rotate(-16deg)}}@keyframes swing-right{0%{transform:rotate(16deg)}15%{transform:rotate(10deg)}40%{transform:rotate(-8deg)}60%{transform:rotate(6deg)}85%{transform:rotate(-12deg)}100%{transform:rotate(16deg)}}.hanger.left{animation:swing-left 6.8s cubic-bezier(.25,.46,.45,.94) infinite}.hanger.right{animation:swing-right 7.6s cubic-bezier(.25,.46,.45,.94) infinite}@media(max-width:768px){.hanger{display:none}}.extra-left-subtitle,.extra-right-subtitle{position:fixed;font-size:1.5rem;color:#ffd6ff;font-weight:700;text-shadow:0 0 12px rgba(255,180,255,.8);z-index:2;width:300px;text-align:center;pointer-events:none}.extra-left-subtitle{left:100px;top:600px}.extra-right-subtitle{right:100px;top:600px}.side-subtitle{position:fixed;font-size:1.5rem;color:#03ff18;font-weight:700;text-shadow:0 0 12px rgba(195,255,180,.8);z-index:2;width:400px;text-align:center;pointer-events:none}.left-subtitle{left:110px;top:80px}.right-subtitle{right:110px;top:80px}.side-extra{position:fixed;text-align:center;color:#ff0000;z-index:2;width:300px;pointer-events:none}.left-extra{left:149px;top:670px}.right-extra{right:149px;top:670px}.extra-text{font-size:1.2rem;font-weight:600;margin-bottom:8px;text-shadow:0 0 10px rgba(255,255,255,.7)}.extra-image{width:200px;height:auto;border-radius:10px;box-shadow:0 0 12px rgba(255,255,255,.3)}.award-box{display:inline-block;padding:5px 12px;border:2px solid #292727;border-radius:8px;background:rgba(0,0,0,.5);text-align:center;font-weight:bold;font-size:1.3rem;text-shadow:0 0 6px rgba(255,255,255,.5)}.p22{color:#ff0000}.samgrucha{position:absolute;margin-top:100px;margin-left:850px;width:350px;height:auto}.samslade{position:absolute;margin-top:550px;margin-left:-850px;width:250px;height:auto}.knife-subtitle{position:fixed;font-size:1.2rem;font-weight:700;color:#ffcc00;text-shadow:0 0 10px rgba(255,200,50,.9);z-index:2;pointer-events:none;text-align:center;line-height:1.4}.knife-left{left:243px;top:140px}.knife-right{right:237px;top:140px}#countdown{font-size:1.4rem;font-weight:bold;color:#c4ab22;text-align:center;margin-top:15px;text-shadow:0 0 8px #c7bc81}body{overflow:hidden}</style></head><body><h2 class="side-subtitle left-subtitle"><span class="award-box">NAGRODA #1</span></h2><h2 class="side-subtitle right-subtitle"><span class="award-box">NAGRODA #2</span></h2><div class="knife-subtitle knife-left"><p>MARBLE FADE</p><p>FACTORY NEW</p><p>1450zł</p></div><div class="knife-subtitle knife-right"><p>AUTOTRONIKA</p><p>MINIMAL WEAR</p><p>1250zł</p></div><div class="hanger left" id="hanger-left"><div style="display:flex;flex-direction:column;align-items:center;"></div><img src="kosa3.png" class="side-image left" alt="Dekoracja lewa"></div><div class="hanger right" id="hanger-right"><div style="display:flex;flex-direction:column;align-items:center;"></div><img src="kosa4.png" class="side-image right" alt="Dekoracja prawa"></div><h2 class="side-subtitle extra-left-subtitle"><span class="award-box">NAGRODA #3</span></h2><h2 class="side-subtitle extra-right-subtitle"><span class="award-box">NAGRODA #4</span></h2><div class="side-extra left-extra"><img src="gift1.png" alt="Miniatura lewa" class="extra-image"></div><div class="side-extra right-extra"><img src="gift2.png" alt="Miniatura prawa" class="extra-image"></div><main class="contest-frame"><header><h1>Slade x Grucha</h1><h2>KONKURS</h2><p>Warunki konkursu:</p><ul class="rules-list"><li>Zaobserwuj wskazane profile na Instagramie.</li><li>Zasubskrybuj wskazane kanały na YouTube.</li><li>Zostaw komentarz z nazwą swojego Instagrama pod filmem konkursowym.</li><li>Sprawdź wyniki w wyznaczonym terminie.</li><div id="countdown"></div></ul></header><div id="partners-container"></div></main><img src="samslade.png" class="samslade"><img src="samgrucha.png" class="samgrucha">
-<script>const partners=[{name:"IG: Slade",logo:"ig.png",background:"igslade2.png",url:"aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS94c2xhZGUyLjAv",hoverText:"Warunek: Zostaw follow!"},{name:"IG: Grucha",logo:"ig.png",background:"iggrucha2.png",url:"aHR0cHM6Ly93d3cuaW5zdGFncmFtLmNvbS9ncnVjaGFvbmUv",hoverText:"Warunek: Zostaw follow!"},{name:"YouTube: Slade",logo:"yt2.png",background:"slade2.png",url:"aHR0cHM6Ly93d3cueW91dHViZS5jb20vQFNsYWRlQ29yZQ==",hoverText:"Warunek: Subskrybcja i komentarz z NAZWĄ instagrama"},{name:"YouTube: Grucha",logo:"yt2.png",background:"grucha2.jpg",url:"aHR0cHM6Ly93d3cueW91dHViZS5jb20vQEdydWNoYW9uZQ==",hoverText:"Warunek: Subskrybcja i komentarz z NAZWĄ instagrama"},{name:"WYNIKI",logo:"dc.png",background:"tlowyniki.png",url:"aHR0cHM6Ly9kaXNjb3JkLmdnL1gzRlF6dU1Cako=",hoverText:"Tu będą wyniki"}];const container=document.getElementById('partners-container');partners.forEach(partner=>{const card=document.createElement('div');card.classList.add('partner-card');card.style.backgroundImage=`url(${partner.background})`;card.innerHTML=`<div class="partner-logo"><img src="${partner.logo}" alt="${partner.name}"></div><div class="partner-name">${partner.name}</div><div class="checkmark">✔</div><div class="overlay"><div class="overlay-text">${partner.hoverText}</div></div>`;const checkmark=card.querySelector('.checkmark');card.addEventListener('click',e=>{window.open(partner.url,'_blank');setTimeout(()=>{checkmark.classList.add('show')},3000)});container.appendChild(card)});window.addEventListener('DOMContentLoaded',()=>{document.body.classList.add('loaded')});const endDate=new Date("2025-10-31T23:59:59").getTime();const countdown=document.getElementById("countdown");setInterval(()=>{const now=new Date().getTime();const distance=endDate-now;if(distance<0){countdown.innerHTML="⏰ Konkurs zakończony!";return}const days=Math.floor(distance/(1000*60*60*24));const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));const minutes=Math.floor((distance%(1000*60*60))/(1000*60));const seconds=Math.floor((distance%(1000*60))/1000);countdown.innerHTML=`⏳ Pozostało: ${days}d ${hours}h ${minutes}m ${seconds}s`},1000);function adjustWebLine(hangerId,webId,imgSelector){const hanger=document.getElementById(hangerId);const web=document.getElementById(webId);const img=hanger?hanger.querySelector(imgSelector):null;if(!hanger||!web||!img)return;function update(){const imgRect=img.getBoundingClientRect();const distance=Math.max(120,imgRect.top-12);web.style.height=(distance-8)+'px'}update();window.addEventListener('resize',update);window.addEventListener('scroll',update,{passive:true});img.addEventListener('load',update)}document.addEventListener('DOMContentLoaded',()=>{adjustWebLine('hanger-left','web-left','img.side-image.left');adjustWebLine('hanger-right','web-right','img.side-image.right');const left=document.getElementById('hanger-left');const right=document.getElementById('hanger-right');if(left&&right){left.style.animationDelay=(Math.random()*1.2)+'s';right.style.animationDelay=(Math.random()*1.2)+'s';left.style.transformOrigin='50% 0%';right.style.transformOrigin='50% 0%'}})</script></body></html>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <link rel="icon" type="image/png" href="sladexgrucha.png">
+  <meta charset="UTF-8">
+  <title>Slade x Grucha | KONKURS (pajęczyny + bujanie)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+
+    body {
+      background: url('tloo.png') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      overflow-x: hidden;
+      perspective: 1000px;
+      opacity: 0; /* początkowa przezroczystość */
+      transition: opacity 1s ease-in-out; /* animacja */
+    }
+
+    body.loaded {
+      opacity: 1; /* pełna widoczność po załadowaniu */
+    }
+
+    /* Duża ramka obejmująca cały konkurs */
+    .contest-frame {
+      border: 2px solid #fcc884;
+      border-radius: 20px;
+      padding: 30px 20px;
+      background: rgb(19, 19, 19);
+      max-width: 600px;
+      width: 90%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      z-index: 2;
+      position: relative;
+      box-shadow: 0 0 20px rgba(192, 132, 252, 0.5);
+      margin-top: 30px;
+    }
+
+    header {
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    #partners-container {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .partner-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .partner-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .partner-logo {
+      width: 50px;
+      height: 50px;
+      z-index: 2;
+      margin-right: 15px;
+      background-color: rgba(0,0,0,0.4);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .partner-logo img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+
+    .partner-name {
+      font-size: 1.2rem;
+      font-weight: bold;
+      z-index: 2;
+      flex-grow: 1;
+    }
+
+    .partner-card:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 3;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .overlay-text {
+      font-size: 1.1rem;
+      font-weight: bold;
+      line-height: 1.3;
+    }
+
+    .partner-card:hover .overlay {
+      opacity: 1;
+    }
+
+    .checkmark {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #00c853;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+      z-index: 2;
+      opacity: 0;
+      transform: scale(0.5);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+      flex-shrink: 0;
+      margin-left: 10px;
+    }
+
+    .checkmark.show {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    .rules-list {
+      margin-top: 15px;
+      margin-left: -20px;
+      padding-left: 20px;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .rules-list li {
+      position: relative;
+      padding-left: 22px;
+      font-size: 1rem;
+      color: #fcffd7;
+      line-height: 1.4;
+      letter-spacing: 0.3px;
+    }
+
+.rules-list li::before {
+  content: "✔"; /* zamiast kropki jest ptaszek */
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #ffee00; /* zielony ptaszek */
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-shadow: 0 0 6px rgba(255, 208, 0, 0.7);
+}
+
+    /* --- Nowa część: pajęczyny + bujanie jako wahadło --- */
+    /* Kontener wieszający obraz + link pajęczyny */
+    .hanger {
+      position: fixed;
+      top: 0;
+      display: flex;
+      align-items: flex-start; /* linia zaczyna od góry */
+      justify-content: center;
+      pointer-events: none; /* dekoracja, nie klikalna */
+      z-index: 1; /* za ramką konkursu */
+      transform-origin: 50% 0%; /* punkt obrotu: górny środek */
+      will-change: transform;
+    }
+
+    /* cienka linia pajęczyny */
+    .web-line {
+      width: 2px;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.95), rgba(255,255,255,0.1));
+      border-radius: 1px;
+      box-shadow: 0 0 6px rgba(255,255,255,0.08);
+      flex-shrink: 0;
+    }
+
+    /* mały skaczący supeł / pajęczyna u góry */
+    .web-knot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 30%, #ffffff, #cfcfcf 40%, transparent 70%);
+      margin-top: 6px;
+      box-shadow: 0 0 8px rgba(255,255,255,0.1);
+    }
+
+    /* obrazek trzymany na końcu linki */
+    .hanger img.side-image {
+      margin-top: 8px; /* odległość od końca linijki */
+      width: 670px;
+      height: 670px;
+      transform-origin: 50% 0%; /* tak obraz też się buja względem góry */
+      object-fit: contain;
+      display: block;
+      z-index: 2;
+      animation: none; /* animacja sterowana na kontenerze */
+    }
+
+    /* osobne klasy dla lewego/prawego - pozycjonowanie i amplituda */
+    .hanger.left { 
+      left: 180px; 
+     top: -110px;
+    }
+    .hanger.right {
+       right: 180px;
+      top: -110px;
+     }
+
+    /* kluczowe klatki, symulacja ruchu wahadła (gładkie, naturalne) */
+    @keyframes swing-left {
+      0%   { transform: rotate(-16deg); }
+      15%  { transform: rotate(-10deg); }
+      40%  { transform: rotate(8deg); }
+      60%  { transform: rotate(-6deg); }
+      85%  { transform: rotate(12deg); }
+      100% { transform: rotate(-16deg); }
+    }
+
+    @keyframes swing-right {
+      0%   { transform: rotate(16deg); }
+      15%  { transform: rotate(10deg); }
+      40%  { transform: rotate(-8deg); }
+      60%  { transform: rotate(6deg); }
+      85%  { transform: rotate(-12deg); }
+      100% { transform: rotate(16deg); }
+    }
+
+    /* indywidualne ustawienia amplitudy i czasu, tak żeby nie bujały się idealnie synchronicznie */
+    .hanger.left { animation: swing-left 6.8s cubic-bezier(.25,.46,.45,.94) infinite; }
+    .hanger.right { animation: swing-right 7.6s cubic-bezier(.25,.46,.45,.94) infinite; }
+
+    /* drobne poprawki responsywne - ukrycie na telefonach jak wcześniej */
+    @media (max-width: 768px) {
+      .hanger { display: none; }
+    }
+
+    /* pozostałe dekoracje (napisy, gift itp.) - nie zmieniane znacząco */
+    .extra-left-subtitle,
+    .extra-right-subtitle {
+      position: fixed;
+      font-size: 1.5rem;
+      color: #ffd6ff;
+      font-weight: 700;
+      text-shadow: 0 0 12px rgba(255, 180, 255, 0.8);
+      z-index: 2;
+      width: 300px;
+      text-align: center;
+      pointer-events: none;
+    }
+
+    .extra-left-subtitle { left: 100px; top: 600px; }
+    .extra-right-subtitle { right: 100px; top: 600px; }
+
+    .side-subtitle { position: fixed; font-size: 1.5rem; color: #03ff18; font-weight: 700; text-shadow: 0 0 12px rgba(195, 255, 180, 0.8); z-index: 2; width: 400px; text-align: center; pointer-events: none; }
+    .left-subtitle { left: 110px; top: 80px; }
+    .right-subtitle { right: 110px; top: 80px; }
+
+    .side-extra { position: fixed; text-align: center; color: #ff0000; z-index: 2; width: 300px; pointer-events: none; }
+    .left-extra { left: 149px; top: 670px; }
+    .right-extra { right: 149px; top: 670px; }
+
+    .extra-text { font-size: 1.2rem; font-weight: 600; margin-bottom: 8px; text-shadow: 0 0 10px rgba(255,255,255,0.7); }
+    .extra-image { width: 200px; height: auto; border-radius: 10px; box-shadow: 0 0 12px rgba(255,255,255,0.3); }
+
+    .award-box { display: inline-block; padding: 5px 12px; border: 2px solid #292727; border-radius: 8px; background: rgba(0, 0, 0, 0.5); text-align: center; font-weight: bold; font-size: 1.3rem; text-shadow: 0 0 6px rgba(255,255,255,0.5); }
+
+    .p22 { color:#ff0000; }
+
+    .samgrucha { position: absolute; margin-top: 100px; margin-left: 850px; width: 350px; height: auto; }
+    .samslade { position: absolute; margin-top: 550px; margin-left: -850px; width: 250px; height: auto; }
+
+    .knife-subtitle { position: fixed; font-size: 1.2rem; font-weight: 700; color: #ffcc00; text-shadow: 0 0 10px rgba(255, 200, 50, 0.9); z-index: 2; pointer-events: none; text-align: center; line-height: 1.4; }
+    .knife-left { left: 243px; top: 140px; }
+    .knife-right { right: 237px; top: 140px; }
+
+    #countdown { font-size: 1.4rem; font-weight: bold; color: #c4ab22; text-align: center; margin-top: 15px; text-shadow: 0 0 8px #c7bc81; }
+
+    /* zachowaj overflow: hidden jeśli było potrzebne, ale upewnij się, że dekoracje nie obcinają się */
+    body { overflow: hidden; }
+  </style>
+</head>
+<body>
+<h2 class="side-subtitle left-subtitle"><span class="award-box">NAGRODA #1</span></h2>
+<h2 class="side-subtitle right-subtitle"><span class="award-box">NAGRODA #2</span></h2>
+
+<!-- ✨ NOWE TRZYLINIOWE NAPISY -->
+<div class="knife-subtitle knife-left">
+  <p>MARBLE FADE</p>
+  <p>FACTORY NEW</p>
+  <p>1450zł</p>
+</div>
+
+<div class="knife-subtitle knife-right">
+  <p>AUTOTRONIKA</p>
+  <p>MINIMAL WEAR</p>
+  <p>1250zł</p>
+</div>
+
+<!-- ZAMIANA: dekoracyjne zdjęcia na elementy "hanger" z pajęczyną -->
+
+<!-- Lewa pajęczyna + kosa -->
+<div class="hanger left" id="hanger-left">
+  <div style="display:flex;flex-direction:column;align-items:center;">
+  </div>
+  <img src="kosa3.png" class="side-image left" alt="Dekoracja lewa">
+</div>
+
+<!-- Prawa pajęczyna + kosa -->
+<div class="hanger right" id="hanger-right">
+  <div style="display:flex;flex-direction:column;align-items:center;">
+  </div>
+  <img src="kosa4.png" class="side-image right" alt="Dekoracja prawa">
+</div>
+
+
+  <!-- Nad dolnymi nagrodami -->
+<h2 class="side-subtitle extra-left-subtitle"><span class="award-box">NAGRODA #3</span></h2>
+<h2 class="side-subtitle extra-right-subtitle"><span class="award-box">NAGRODA #4</span></h2>
+
+<!-- ✨ NOWE: napisy i małe obrazki pod dużymi -->
+<div class="side-extra left-extra">
+  <img src="gift1.png" alt="Miniatura lewa" class="extra-image">
+</div>
+<div class="side-extra right-extra">
+  <img src="gift2.png" alt="Miniatura prawa" class="extra-image">
+</div>
+  <!-- Ramka obejmująca cały konkurs -->
+  <main class="contest-frame">
+    <header>
+      <h1>Slade x Grucha</h1>
+      <h2>KONKURS</h2>
+      <p>Warunki konkursu:</p>
+      <ul class="rules-list">
+        <li>Zaobserwuj wskazane profile na Instagramie.</li>
+        <li>Zasubskrybuj wskazane kanały na YouTube.</li>
+        <li>Zostaw komentarz z nazwą swojego Instagrama pod filmem konkursowym.</li>
+        <li>Sprawdź wyniki w wyznaczonym terminie.</li>
+        <div id="countdown"></div>
+      </ul>
+    </header>
+
+    <div id="partners-container">
+      <!-- Elementy dodawane przez JS -->
+    </div>
+  </main>
+    <img src="samslade.png" class="samslade"> 
+    <img src="samgrucha.png" class="samgrucha">
+  <script>
+    const partners = [
+      {
+        name: "IG: Slade",
+        logo: "ig.png",
+        background: "igslade2.png",
+        url: "https://www.instagram.com/xslade2.0/",
+        hoverText: "Warunek: Zostaw follow!"
+      },
+      {
+        name: "IG: Grucha",
+        logo: "ig.png",
+        background: "iggrucha2.png",
+        url: "https://www.instagram.com/gruchaone/",
+        hoverText: "Warunek: Zostaw follow!"
+      },
+      {
+        name: "YouTube: Slade",
+        logo: "yt2.png",
+        background: "slade2.png",
+        url: "https://www.youtube.com/@SladeCore",
+        hoverText: "Warunek: Subskrybcja i komentarz z NAZWĄ instagrama"
+      },
+      {
+        name: "YouTube: Grucha",
+        logo: "yt2.png",
+        background: "grucha2.jpg",
+        url: "https://www.youtube.com/@Gruchaone",
+        hoverText: "Warunek: Subskrybcja i komentarz z NAZWĄ instagrama"
+      },
+      {
+        name: "WYNIKI",
+        logo: "dc.png",
+        background: "tlowyniki.png",
+        url: "https://discord.gg/X3FQzuMBjJ",
+        hoverText: "Tu będą wyniki"
+      }
+    ];
+
+    const container = document.getElementById('partners-container');
+
+    partners.forEach(partner => {
+      const card = document.createElement('div');
+      card.classList.add('partner-card');
+      card.style.backgroundImage = `url(${partner.background})`;
+
+      card.innerHTML = `
+        <div class="partner-logo">
+          <img src="${partner.logo}" alt="${partner.name}">
+        </div>
+        <div class="partner-name">${partner.name}</div>
+        <div class="checkmark">✔</div>
+        <div class="overlay">
+          <div class="overlay-text">${partner.hoverText}</div>
+        </div>
+      `;
+
+      const checkmark = card.querySelector('.checkmark');
+
+      card.addEventListener('click', (e) => {
+        window.open(partner.url, '_blank');
+        setTimeout(() => {
+          checkmark.classList.add('show');
+        }, 3000);
+      });
+
+      container.appendChild(card);
+    });
+
+
+  </script>
+      <script>
+  window.addEventListener('DOMContentLoaded', () => {
+    document.body.classList.add('loaded');
+  });
+</script>
+<script>
+  // ustaw datę zakończenia konkursu
+  const endDate = new Date("2025-10-31T23:59:59").getTime();
+  const countdown = document.getElementById("countdown");
+
+  setInterval(() => {
+    const now = new Date().getTime();
+    const distance = endDate - now;
+
+    if (distance < 0) {
+      countdown.innerHTML = "⏰ Konkurs zakończony!";
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    countdown.innerHTML = `⏳ Pozostało: ${days}d ${hours}h ${minutes}m ${seconds}s`;
+  }, 1000);
+</script>
+
+<script>
+  // Skrypt precyzyjnie dopasowujący długość pajęczyny do pozycji obrazka
+  // oraz ustawiający minimalną długość żeby pajęczyna nie była za krótka.
+  function adjustWebLine(hangerId, webId, imgSelector) {
+    const hanger = document.getElementById(hangerId);
+    const web = document.getElementById(webId);
+    const img = hanger.querySelector(imgSelector);
+
+    if (!hanger || !web || !img) return;
+
+    function update() {
+      const imgRect = img.getBoundingClientRect();
+      // odległość od górnej krawędzi viewportu do górnej krawędzi obrazka
+      const distance = Math.max(120, imgRect.top - 12); // min 120px, zapobiega zbyt krótkiej lince
+
+      // ustaw wysokość linii (dodajemy mały zapas 8px)
+      web.style.height = (distance - 8) + 'px';
+
+      // upewnij się, że hanger ma transform-origin w górnym środku i jest ustawione na właściwej pozycji
+      // (left/right ustawiliśmy w CSS)
+      // Dodatkowo, przenieś obrazek poza strukturę linijki (już tak jest w DOM)
+    }
+
+    // aktualizuj natychmiast
+    update();
+    // aktualizuj przy resize i przy scroll (jeśli użytkownik przewinie)
+    window.addEventListener('resize', update);
+    window.addEventListener('scroll', update, { passive: true });
+
+    // jeśli obrazy ładują się później (np. cache), upewnij się, że po załadowaniu też
+    img.addEventListener('load', update);
+  }
+
+  // inicjalizacja dla obu pajęczyn
+  document.addEventListener('DOMContentLoaded', () => {
+    adjustWebLine('hanger-left', 'web-left', 'img.side-image.left');
+    adjustWebLine('hanger-right', 'web-right', 'img.side-image.right');
+
+    // lekka faza między wahadłami żeby ruch nie był idealnie zsynchronizowany
+    const left = document.getElementById('hanger-left');
+    const right = document.getElementById('hanger-right');
+    if (left && right) {
+      // dajemy początkowe losowe przesunięcie animacji (w sekundach)
+      left.style.animationDelay = (Math.random() * 1.2) + 's';
+      right.style.animationDelay = (Math.random() * 1.2) + 's';
+
+      // mała różnica w amplitudzie (skala transform) - dodajemy animację skali żeby wyglądało naturalniej
+      left.style.transformOrigin = '50% 0%';
+      right.style.transformOrigin = '50% 0%';
+    }
+  });
+</script>
+</body>
+</html>
