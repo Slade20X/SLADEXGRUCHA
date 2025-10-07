@@ -3,7 +3,7 @@
 <head>
   <link rel="icon" type="image/png" href="sladexgrucha.png">
   <meta charset="UTF-8">
-  <title>Slade x Grucha | KONKURS</title>
+  <title>Slade x Grucha | KONKURS (pajęczyny + bujanie)</title>
   <style>
     * {
       margin: 0;
@@ -320,6 +320,29 @@
 
     /* zachowaj overflow: hidden jeśli było potrzebne, ale upewnij się, że dekoracje nie obcinają się */
     body { overflow: hidden; }
+
+.wyniki-wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.wyniki-wrapper .partner-card.half {
+  flex: 1;
+  width: 48%;
+  background-size: cover;
+}
+
+@media (max-width: 600px) {
+  .wyniki-wrapper {
+    flex-direction: column;
+  }
+  .wyniki-wrapper .partner-card.half {
+    width: 100%;
+  }
+}
+
+
   </style>
 </head>
 <body>
@@ -423,13 +446,16 @@
         logo: "dc.png",
         background: "tlowyniki.png",
         url: "https://discord.gg/X3FQzuMBjJ",
-        hoverText: "Tu będą wyniki"
+        hoverText: ""
       }
     ];
 
-    const container = document.getElementById('partners-container');
 
-    partners.forEach(partner => {
+  const container = document.getElementById('partners-container');
+
+  partners.forEach((partner, index) => {
+    // jeśli to NIE jest ostatni element:
+    if (index < partners.length - 1) {
       const card = document.createElement('div');
       card.classList.add('partner-card');
       card.style.backgroundImage = `url(${partner.background})`;
@@ -446,16 +472,45 @@
       `;
 
       const checkmark = card.querySelector('.checkmark');
-
-      card.addEventListener('click', (e) => {
+      card.addEventListener('click', () => {
         window.open(partner.url, '_blank');
-        setTimeout(() => {
-          checkmark.classList.add('show');
-        }, 3000);
+        setTimeout(() => checkmark.classList.add('show'), 3000);
       });
 
       container.appendChild(card);
-    });
+    } 
+    // jeśli to ostatni element (Discord)
+    else {
+      const wynikiWrapper = document.createElement('div');
+      wynikiWrapper.classList.add('wyniki-wrapper');
+
+      const wyniki1 = document.createElement('div');
+      wyniki1.classList.add('partner-card', 'half');
+      wyniki1.style.backgroundImage = `url(${partner.background})`;
+      wyniki1.innerHTML = `
+        <div class="partner-logo"><img src="${partner.logo}" alt="Wyniki 1"></div>
+        <div class="partner-name">WYNIKI #1</div>
+        <div class="overlay"><div class="overlay-text">Discord Slade</div></div>
+      `;
+      wyniki1.addEventListener('click', () => window.open(partner.url, '_blank'));
+
+      const wyniki2 = document.createElement('div');
+      wyniki2.classList.add('partner-card', 'half');
+      wyniki2.style.backgroundImage = `url(${partner.background})`;
+      wyniki2.innerHTML = `
+        <div class="partner-logo"><img src="${partner.logo}" alt="Wyniki 2"></div>
+        <div class="partner-name">WYNIKI #2</div>
+        <div class="overlay"><div class="overlay-text">Discord Grucha</div></div>
+      `;
+      wyniki2.addEventListener('click', () => window.open(partner.url, '_blank'));
+
+      wynikiWrapper.appendChild(wyniki1);
+      wynikiWrapper.appendChild(wyniki2);
+      container.appendChild(wynikiWrapper);
+    }
+  });
+
+
 
 
   </script>
@@ -541,4 +596,3 @@
 </script>
 </body>
 </html>
-
