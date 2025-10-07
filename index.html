@@ -3,7 +3,7 @@
 <head>
   <link rel="icon" type="image/png" href="sladexgrucha.png">
   <meta charset="UTF-8">
-  <title>Slade x Grucha | KONKURS</title>
+  <title>Slade x Grucha | KONKURS (pajęczyny + bujanie)</title>
   <style>
     * {
       margin: 0;
@@ -431,21 +431,22 @@
         name: "YouTube: Slade",
         logo: "yt2.png",
         background: "slade2.png",
-        url: "https://www.youtube.com/watch?v=dq5HVv5CKUU",
+        url: "https://www.youtube.com/watch?v=dq5HVv5CKUU&t=6s",
         hoverText: "Warunek: Subskrybcja i komentarz z NAZWĄ instagrama"
       },
       {
         name: "YouTube: Grucha",
         logo: "yt2.png",
         background: "grucha2.jpg",
-        url: "https://www.youtube.com/@Gruchaone",
+        url: "https://www.youtube.com/watch?v=rUM4MJzLp3s",
         hoverText: "Warunek: Subskrybcja i komentarz z NAZWĄ instagrama"
       },
       {
         name: "WYNIKI",
         logo: "dc.png",
         background: "tlowyniki.png",
-        url: "https://discord.gg/X3FQzuMBjJ",
+        url1: "https://discord.gg/X3FQzuMBjJ",
+        url2: "https://discord.gg/fs4dw5ZTbY", 
         hoverText: ""
       }
     ];
@@ -480,34 +481,36 @@
       container.appendChild(card);
     } 
     // jeśli to ostatni element (Discord)
-    else {
-      const wynikiWrapper = document.createElement('div');
-      wynikiWrapper.classList.add('wyniki-wrapper');
+// jeśli to ostatni element (Discord)
+else {
+  const wynikiWrapper = document.createElement('div');
+  wynikiWrapper.classList.add('wyniki-wrapper');
 
-      const wyniki1 = document.createElement('div');
-      wyniki1.classList.add('partner-card', 'half');
-      wyniki1.style.backgroundImage = `url(${partner.background})`;
-      wyniki1.innerHTML = `
-        <div class="partner-logo"><img src="${partner.logo}" alt="Wyniki 1"></div>
-        <div class="partner-name">WYNIKI #1</div>
-        <div class="overlay"><div class="overlay-text">Discord Slade</div></div>
-      `;
-      wyniki1.addEventListener('click', () => window.open(partner.url, '_blank'));
+  const wyniki1 = document.createElement('div');
+  wyniki1.classList.add('partner-card', 'half');
+  wyniki1.style.backgroundImage = `url(${partner.background})`;
+  wyniki1.innerHTML = `
+    <div class="partner-logo"><img src="${partner.logo}" alt="Wyniki 1"></div>
+    <div class="partner-name">WYNIKI #1</div>
+    <div class="overlay"><div class="overlay-text">Discord Slade</div></div>
+  `;
+  wyniki1.addEventListener('click', () => window.open(partner.url1, '_blank'));
 
-      const wyniki2 = document.createElement('div');
-      wyniki2.classList.add('partner-card', 'half');
-      wyniki2.style.backgroundImage = `url(${partner.background})`;
-      wyniki2.innerHTML = `
-        <div class="partner-logo"><img src="${partner.logo}" alt="Wyniki 2"></div>
-        <div class="partner-name">WYNIKI #2</div>
-        <div class="overlay"><div class="overlay-text">Discord Grucha</div></div>
-      `;
-      wyniki2.addEventListener('click', () => window.open(partner.url, '_blank'));
+  const wyniki2 = document.createElement('div');
+  wyniki2.classList.add('partner-card', 'half');
+  wyniki2.style.backgroundImage = `url(${partner.background})`;
+  wyniki2.innerHTML = `
+    <div class="partner-logo"><img src="${partner.logo}" alt="Wyniki 2"></div>
+    <div class="partner-name">WYNIKI #2</div>
+    <div class="overlay"><div class="overlay-text">Discord Grucha</div></div>
+  `;
+  wyniki2.addEventListener('click', () => window.open(partner.url2, '_blank'));
 
-      wynikiWrapper.appendChild(wyniki1);
-      wynikiWrapper.appendChild(wyniki2);
-      container.appendChild(wynikiWrapper);
-    }
+  wynikiWrapper.appendChild(wyniki1);
+  wynikiWrapper.appendChild(wyniki2);
+  container.appendChild(wynikiWrapper);
+}
+
   });
 
 
@@ -596,5 +599,3 @@
 </script>
 </body>
 </html>
-
-
